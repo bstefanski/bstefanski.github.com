@@ -402,3 +402,14 @@ task :list do
   puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}"
   puts "(type rake -T for more detail)\n\n"
 end
+
+desc "Generate website, add, commit and deploy"
+task :x do
+  system "git add ."
+  message = "Site updated at #{Time.now.utc}"
+  system "git commit -am \"#{message}\""
+  Rake::Task[:integrate].execute
+  Rake::Task[:generate].execute
+  system "git push origin source"
+  Rake::Task[:deploy].execute
+end
