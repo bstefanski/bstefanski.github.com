@@ -1,0 +1,59 @@
+{{ partial "header.html" . }}
+
+{{if .Site.Params.cover}}
+<header class="main-header " style="background-image: url({{.Site.BaseUrl}}{{.Site.Params.cover}})">
+{{else}}
+<header class="main-header no-cover">
+{{end}}
+
+    <nav class="main-nav overlay clearfix">
+        {{ if .Site.Menus.main }}
+            <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word"></span></a>
+        {{else}}
+            <!-- <a class="menu-button icon-feed" href="{{ .RSSLink }}">&nbsp;&nbsp;Subscribe</a> -->
+        {{end}}
+    </nav>
+    <div class="vertical">
+        <div class="main-header-content inner">
+            {{ if .Site.Params.githubName }}
+            <a href="https://github.com/{{ .Site.Params.githubName }}">
+                <span class="icon-github"></span>
+            </a>
+            {{end}}
+            {{ if .Site.Params.twitterName }}
+            &nbsp;
+            <a class="bloglogo" href="https://twitter.com/{{ .Site.Params.twitterName }}">
+                <span class="icon-twitter"></span>
+            </a>
+            {{end}}
+            {{ if .Site.Params.linkedinName }}
+            &nbsp;
+            <a href="https://www.linkedin.com/pub/{{ .Site.Params.linkedinName }}">
+                <span class="icon-linkedin"></span>
+            </a>
+            {{end}}
+            <h1 class="page-title">{{ .Site.Title }}</h1>
+            <h2 class="page-description">{{ .Site.Params.description }}</h2>
+        </div>
+    </div>
+    <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
+</header>
+
+
+<main id="content" class="content" role="main">
+
+    {{ $paginator := .Paginator }}
+
+    <div class="extra-pagination inner">
+        {{ partial "pagination.html" $paginator }}
+    </div>
+
+    {{ range $index, $page := .Paginator.Pages }}
+        {{ .Render "li" }}
+    {{ end }}
+
+    {{ partial "pagination.html" $paginator }}
+
+</main>
+
+{{ partial "footer.html" . }}
