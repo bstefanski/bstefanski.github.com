@@ -1,0 +1,17 @@
+baseurl = "http://bstefanski.pl"
+languageCode = "en-us"
+title = "Bartek Stefanski"
+theme = "casper"
+paginate = 10
+disqusShortname = "bstefanski"
+Copyright = "All rights reserved - 2015"
+
+[params]
+  description = "Thoughts on programming"
+  authorwebsite = "http://bstefanski.pl"
+  googleAnalyticsUserID = "UA-61553917-1"
+  githubName = "bstefanski"
+  twitterName = "b_stefanski"
+  linkedinName = "bartłomiej-stefański/66/730/129"
+  enableRss = true
+  hideHUGOSupport = false
