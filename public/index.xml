@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bartek Stefanski</title>
+    <link>http://bstefanski.pl/</link>
+    <description>Recent content on Bartek Stefanski</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights reserved - 2015</copyright>
+    <lastBuildDate>Mon, 06 Apr 2015 18:57:29 +0200</lastBuildDate>
+    <atom:link href="http://bstefanski.pl/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>hello world</title>
+      <link>http://bstefanski.pl/post/hello-world/</link>
+      <pubDate>Mon, 06 Apr 2015 18:57:29 +0200</pubDate>
+      
+      <guid>http://bstefanski.pl/post/hello-world/</guid>
+      <description>&lt;p&gt;hello world&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
